@@ -105,3 +105,18 @@ Coordinate between technical and non-technical stakeholders.
 Ensure the project meets its goals within scope and timeline.
 
 
+⚙️ Technology Stack
+This project leverages a modern and scalable technology stack to support core Airbnb-like functionalities including listings, bookings, payments, and reviews.
+
+Technology	Purpose
+Django	A high-level Python web framework used for building robust backend systems and RESTful APIs.
+Django REST Framework (DRF)	An extension of Django for creating and managing RESTful API endpoints with ease.
+PostgreSQL	A powerful open-source relational database used to store structured data such as users, properties, bookings, and payments.
+GraphQL	A flexible query language that allows clients to request exactly the data they need, improving API performance and usability.
+Celery	An asynchronous task queue used for background job processing, such as sending notifications or handling delayed tasks like payment processing.
+Redis	An in-memory data store used for caching and as a message broker for Celery to improve performance and speed up task processing.
+Docker	A containerization tool used to create consistent development, testing, and deployment environments across machines.
+GitHub Actions (CI/CD)	Automates testing, building, and deploying code through Continuous Integration and Continuous Deployment pipelines.
+
+
+
