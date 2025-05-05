@@ -242,3 +242,38 @@ All API endpoints are documented using the OpenAPI standard, with support for bo
 Implements indexing and caching strategies to improve performance and reduce query latency. This is crucial for maintaining scalability and a fast user experience as the system grows.
 
 
+
+🔐 API Security
+Securing the backend API is critical for protecting user data, financial transactions, and ensuring platform integrity. The following security measures are implemented to safeguard the Airbnb Clone application.
+
+1. Authentication
+What it is: Verifies user identity using secure mechanisms such as JWT (JSON Web Tokens) or token-based authentication via Django REST Framework.
+
+Why it matters: Ensures that only verified users can access their accounts and perform actions like bookings or property listings, reducing the risk of impersonation and unauthorized access.
+
+2. Authorization
+What it is: Restricts access to specific resources based on user roles and permissions (e.g., only hosts can manage properties, only guests can create bookings).
+
+Why it matters: Prevents users from accessing or modifying data they don’t own, preserving data integrity and platform trustworthiness.
+
+3. Rate Limiting
+What it is: Limits the number of requests a user or IP can make in a given timeframe using tools like Django Ratelimit.
+
+Why it matters: Protects against abuse, brute-force login attempts, and denial-of-service (DoS) attacks by limiting excessive or malicious requests.
+
+4. Input Validation and Sanitization
+What it is: Validates incoming data for correct formats and filters out potentially harmful input (e.g., SQL injections or script tags).
+
+Why it matters: Helps prevent common web vulnerabilities such as SQL injection and cross-site scripting (XSS), ensuring application stability and safety.
+
+5. HTTPS Enforcement
+What it is: Ensures all data transmission between clients and the server is encrypted using SSL/TLS.
+
+Why it matters: Prevents man-in-the-middle (MITM) attacks and ensures sensitive data like passwords and payment details are transmitted securely.
+
+6. Secure Payment Processing
+What it is: Utilizes third-party payment gateways (e.g., Stripe) that comply with PCI-DSS standards.
+
+Why it matters: Protects financial information during transactions, minimizes liability, and builds user trust in the platform.
+
+These layered security strategies work together to protect the application from unauthorized access, data breaches, and service disruptions.
