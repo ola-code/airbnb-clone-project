@@ -214,3 +214,31 @@ A Review is posted by a User for a Property and is typically linked to a past Bo
 
 A Payment is associated with a single Booking.
 
+
+
+
+🚀 Feature Breakdown
+This project includes essential features that replicate the core functionality of a real-world booking platform like Airbnb. Each feature is designed to enhance user experience and support platform scalability.
+
+1. User Management
+Allows users to register, log in, and manage their profiles. It supports authentication and role distinction between hosts and guests, forming the foundation for all user-based interactions.
+
+2. Property Management
+Enables hosts to create, update, and delete property listings. This feature ensures that property information is easily accessible and manageable for both hosts and potential guests.
+
+3. Booking System
+Facilitates the reservation of properties by guests. It includes features like availability checking, booking creation, and booking history management, ensuring a smooth reservation process.
+
+4. Payment Processing
+Handles financial transactions securely when users book properties. It ensures that payments are processed, recorded, and linked to bookings for full traceability.
+
+5. Review System
+Allows guests to leave reviews and ratings after their stays. This builds trust in the platform and helps users make informed decisions based on previous guest experiences.
+
+6. API Documentation
+All API endpoints are documented using the OpenAPI standard, with support for both REST and GraphQL. This makes it easy for frontend teams or third-party apps to integrate with the backend.
+
+7. Database Optimization
+Implements indexing and caching strategies to improve performance and reduce query latency. This is crucial for maintaining scalability and a fast user experience as the system grows.
+
+
