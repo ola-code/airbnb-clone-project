@@ -118,5 +118,99 @@ Redis	An in-memory data store used for caching and as a message broker for Celer
 Docker	A containerization tool used to create consistent development, testing, and deployment environments across machines.
 GitHub Actions (CI/CD)	Automates testing, building, and deploying code through Continuous Integration and Continuous Deployment pipelines.
 
+:
 
+🗃️ Database Design
+This project uses a relational database (PostgreSQL) to model real-world entities and their interactions. Below are the primary entities, their key fields, and relationships.
+
+📌 Key Entities & Fields
+1. Users
+Represents guests and hosts using the platform.
+
+Key Fields:
+
+id: Primary identifier
+
+name: Full name of the user
+
+email: Unique email address (used for authentication)
+
+is_host: Boolean flag to distinguish between guests and hosts
+
+date_joined: Timestamp of account creation
+
+2. Properties
+Represents property listings created by hosts.
+
+Key Fields:
+
+id: Primary identifier
+
+title: Name or title of the listing
+
+description: Details about the property
+
+location: Address or general location
+
+price_per_night: Cost to book the property per night
+
+host_id: Foreign key referencing the Users table
+
+3. Bookings
+Tracks reservations made by users on properties.
+
+Key Fields:
+
+id: Primary identifier
+
+user_id: Foreign key to Users (the guest making the booking)
+
+property_id: Foreign key to Properties (the booked property)
+
+check_in: Date of check-in
+
+check_out: Date of check-out
+
+status: Booking status (e.g., confirmed, cancelled)
+
+4. Reviews
+Allows users to review properties they’ve stayed in.
+
+Key Fields:
+
+id: Primary identifier
+
+user_id: Foreign key to Users (the reviewer)
+
+property_id: Foreign key to Properties (the reviewed property)
+
+rating: Numeric score (e.g., 1–5)
+
+comment: Text feedback from the user
+
+5. Payments
+Handles transactions for bookings.
+
+Key Fields:
+
+id: Primary identifier
+
+booking_id: Foreign key to Bookings
+
+amount: Total payment amount
+
+payment_date: Date of transaction
+
+payment_status: Status of the payment (e.g., successful, failed)
+
+🔗 Entity Relationships
+A User can have multiple Properties (if they are a host).
+
+A Property can have many Bookings, but each Booking belongs to one Property.
+
+A Booking is made by one User and for one Property.
+
+A Review is posted by a User for a Property and is typically linked to a past Booking.
+
+A Payment is associated with a single Booking.
 
